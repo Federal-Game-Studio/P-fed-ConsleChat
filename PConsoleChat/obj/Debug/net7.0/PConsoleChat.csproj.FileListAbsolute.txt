@@ -1,0 +1,14 @@
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\bin\Debug\net7.0\PConsoleChat.exe
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\bin\Debug\net7.0\PConsoleChat.deps.json
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\bin\Debug\net7.0\PConsoleChat.runtimeconfig.json
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\bin\Debug\net7.0\PConsoleChat.dll
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\bin\Debug\net7.0\PConsoleChat.pdb
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\obj\Debug\net7.0\PConsoleChat.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\obj\Debug\net7.0\PConsoleChat.AssemblyInfoInputs.cache
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\obj\Debug\net7.0\PConsoleChat.AssemblyInfo.cs
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\obj\Debug\net7.0\PConsoleChat.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\obj\Debug\net7.0\PConsoleChat.dll
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\obj\Debug\net7.0\refint\PConsoleChat.dll
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\obj\Debug\net7.0\PConsoleChat.pdb
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\obj\Debug\net7.0\PConsoleChat.genruntimeconfig.cache
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\obj\Debug\net7.0\ref\PConsoleChat.dll
