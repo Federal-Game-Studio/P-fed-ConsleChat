@@ -5,6 +5,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 public class Server
 {
@@ -124,16 +125,41 @@ public class Client
 
 public class Program
 {
+    [DllImport("kernel32.dll")]
+    static extern IntPtr GetConsoleWindow();
+
+    [DllImport("user32.dll")]
+    static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+    const int SW_HIDE = 0;
+    private static bool isBackground = false;
     public static void Main(string[] args)
     {
-        Console.WriteLine("Enter 1 to start server, 0 to start client:");
-        string input = Console.ReadLine();
+        bool isServer = false;
 
-        if (input == "1")
+        foreach (var arg in args)
+        {
+            if (arg == "--server")
+            {
+                isServer = true;
+            }
+            else if (arg == "--background")
+            {
+                isBackground = true;
+            }
+        }
+
+        if (isBackground)
+        {
+            var handle = GetConsoleWindow();
+            ShowWindow(handle, SW_HIDE);
+        }
+        
+        if (isServer)
         {
             RunServer();
         }
-        else if (input == "0")
+
+        else
         {
             Console.WriteLine("Enter nickname:");
             string nickname = Console.ReadLine();
