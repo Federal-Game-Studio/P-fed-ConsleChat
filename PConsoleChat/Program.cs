@@ -145,6 +145,86 @@ public class Client
     }
 }
 
+public class Listener
+{
+    private TcpClient client;
+    private NetworkStream stream;
+
+    public Listener()
+    {
+        string[] lines = File.ReadAllLines("ip.txt");
+        string server = lines[0];
+        int port = int.Parse(lines[1]);
+        string nickname = "listener";
+
+        try
+        {
+            client = new TcpClient();
+            var result = client.BeginConnect(server, port, null, null);
+            var success = result.AsyncWaitHandle.WaitOne(TimeSpan.FromSeconds(5));
+
+            if (success)
+            {
+            client.EndConnect(result);
+            stream = client.GetStream();
+            byte[] buffer = Encoding.UTF8.GetBytes(nickname);
+            stream.Write(buffer, 0, buffer.Length);
+            Console.WriteLine("Connected to server");
+            }
+            else
+            {
+            client.Close();
+            Console.WriteLine("Connection timed out");
+            Environment.Exit(0); // Exit the entire program
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Failed to connect to server: " + ex.Message);
+            Environment.Exit(0); // Exit the entire program
+        }
+    }
+
+    public void Run()
+    {
+        Thread thread = new Thread(() => ReceiveMessages());
+        thread.Start();
+        
+        byte[] buffer = new byte[1024];
+        try
+        {
+            while (true)
+            {
+                int bytes = stream.Read(buffer, 0, buffer.Length);
+                string message = Encoding.UTF8.GetString(buffer, 0, bytes);
+                Console.WriteLine(message);
+            }
+        }
+        catch (IOException)
+        {
+            Console.WriteLine("Disconnected from server");
+        }
+    }
+
+    private void ReceiveMessages()
+    {
+        byte[] buffer = new byte[1024];
+        try
+        {
+            while (true)
+            {
+                int bytes = stream.Read(buffer, 0, buffer.Length);
+                string message = Encoding.UTF8.GetString(buffer, 0, bytes);
+                Console.WriteLine(message);
+            }
+        }
+        catch (IOException)
+        {
+            Console.WriteLine("Disconnected from server");
+        }
+    }
+}
+
 public class Program
 {
     [DllImport("kernel32.dll")]
@@ -157,6 +237,7 @@ public class Program
     public static void Main(string[] args)
     {
         bool isServer = false;
+        bool isListener = false;
 
         foreach (var arg in args)
         {
@@ -168,12 +249,22 @@ public class Program
             {
                 isBackground = true;
             }
+            else if (arg == "--listen")
+            {
+                isListener = true;
+            }
         }
 
         if (isBackground)
         {
             var handle = GetConsoleWindow();
             ShowWindow(handle, SW_HIDE);
+        }
+
+        if (isListener)
+        {
+            Listener listener = new Listener();
+            listener.Run();
         }
 
         if (isServer)
