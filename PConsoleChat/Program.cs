@@ -234,6 +234,10 @@ public class Program
     static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
     const int SW_HIDE = 0;
     private static bool isBackground = false;
+    private static string[] lines = File.ReadAllLines("ip.txt");
+    private static string server = lines[0];
+    private static int port = int.Parse(lines[1]);
+
     public static void Main(string[] args)
     {
         bool isServer = false;
@@ -289,7 +293,7 @@ public class Program
 
     private static void RunServer()
     {
-        Server server = new Server(1234);
+        Server server = new Server(Program.port);
         server.Run();
     }
 
