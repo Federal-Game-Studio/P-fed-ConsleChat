@@ -257,6 +257,10 @@ public class Program
             {
                 isListener = true;
             }
+            else if (arg == "--QC")
+            {
+                QClient qClient = new QClient();
+            }
         }
 
         if (isBackground)
