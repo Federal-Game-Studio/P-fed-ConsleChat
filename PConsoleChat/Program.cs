@@ -78,10 +78,32 @@ public class Client
 
     public Client(string server, int port, string nickname)
     {
-        client = new TcpClient(server, port);
-        stream = client.GetStream();
-        byte[] buffer = Encoding.UTF8.GetBytes(nickname);
-        stream.Write(buffer, 0, buffer.Length);
+        try
+        {
+            client = new TcpClient();
+            var result = client.BeginConnect(server, port, null, null);
+            var success = result.AsyncWaitHandle.WaitOne(TimeSpan.FromSeconds(5));
+
+            if (success)
+            {
+            client.EndConnect(result);
+            stream = client.GetStream();
+            byte[] buffer = Encoding.UTF8.GetBytes(nickname);
+            stream.Write(buffer, 0, buffer.Length);
+            Console.WriteLine("Connected to server");
+            }
+            else
+            {
+            client.Close();
+            Console.WriteLine("Connection timed out");
+            Environment.Exit(0); // Exit the entire program
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Failed to connect to server: " + ex.Message);
+            Environment.Exit(0); // Exit the entire program
+        }
     }
 
     public void Run()
@@ -153,7 +175,7 @@ public class Program
             var handle = GetConsoleWindow();
             ShowWindow(handle, SW_HIDE);
         }
-        
+
         if (isServer)
         {
             RunServer();
