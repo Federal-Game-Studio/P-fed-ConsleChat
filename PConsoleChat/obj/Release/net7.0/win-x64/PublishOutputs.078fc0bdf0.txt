@@ -1,0 +1,2 @@
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\bin\Release\net7.0\publish\win-x64\PConsoleChat.pdb
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\bin\Release\net7.0\publish\win-x64\PConsoleChat.exe

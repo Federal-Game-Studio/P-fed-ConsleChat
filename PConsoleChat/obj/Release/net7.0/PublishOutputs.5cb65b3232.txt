@@ -1,0 +1,5 @@
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\bin\Release\net7.0\publish\PConsoleChat.exe
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\bin\Release\net7.0\publish\PConsoleChat.dll
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\bin\Release\net7.0\publish\PConsoleChat.deps.json
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\bin\Release\net7.0\publish\PConsoleChat.runtimeconfig.json
+D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\bin\Release\net7.0\publish\PConsoleChat.pdb
