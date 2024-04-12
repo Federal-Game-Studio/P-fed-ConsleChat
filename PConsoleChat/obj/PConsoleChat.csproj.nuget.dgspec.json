@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PClient\\P-fed-ConsleChat\\PConsoleChat\\PConsoleChat.csproj": {}
+    "D:\\Documents\\GitHub\\P-fed-ConsleChat\\PConsoleChat\\PConsoleChat.csproj": {}
   },
   "projects": {
-    "D:\\PClient\\P-fed-ConsleChat\\PConsoleChat\\PConsoleChat.csproj": {
+    "D:\\Documents\\GitHub\\P-fed-ConsleChat\\PConsoleChat\\PConsoleChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PClient\\P-fed-ConsleChat\\PConsoleChat\\PConsoleChat.csproj",
+        "projectUniqueName": "D:\\Documents\\GitHub\\P-fed-ConsleChat\\PConsoleChat\\PConsoleChat.csproj",
         "projectName": "PConsoleChat",
-        "projectPath": "D:\\PClient\\P-fed-ConsleChat\\PConsoleChat\\PConsoleChat.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\PClient\\P-fed-ConsleChat\\PConsoleChat\\obj\\",
+        "projectPath": "D:\\Documents\\GitHub\\P-fed-ConsleChat\\PConsoleChat\\PConsoleChat.csproj",
+        "packagesPath": "C:\\Users\\Palmer2\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\GitHub\\P-fed-ConsleChat\\PConsoleChat\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Palmer2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -53,30 +50,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.17, 7.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
