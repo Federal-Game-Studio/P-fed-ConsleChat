@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "oT1DPcee5qaLyITNtPOGP09svQL/znP7FywBfGU5Rm5XghVCTdxTmoRktqi5RzG7X+mLgepbh0rPMo/LJl7Y3Q==",
+  "dgSpecHash": "WBL0YGTEmO7fVpd82hc1WgP05hLIefMvZHvka/eTQ49qI/xmtzegt/7t0ir+zdPIX8v2iGvK3sSHuAKDvQMK1A==",
   "success": true,
-  "projectFilePath": "D:\\Documents\\GitHub\\P-fed-ConsleChat\\PConsoleChat\\PConsoleChat.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\PClient\\P-fed-ConsleChat\\PConsoleChat\\PConsoleChat.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.17\\microsoft.netcore.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.17\\microsoft.windowsdesktop.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.17\\microsoft.aspnetcore.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.17\\microsoft.netcore.app.host.win-x64.7.0.17.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -27,3 +27,5 @@ D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\obj\Debug\net7.0\refint\PConso
 D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\obj\Debug\net7.0\PConsoleChat.pdb
 D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\obj\Debug\net7.0\PConsoleChat.genruntimeconfig.cache
 D:\Documents\GitHub\P-fed-ConsleChat\PConsoleChat\obj\Debug\net7.0\ref\PConsoleChat.dll
+D:\PClient\P-fed-ConsleChat\PConsoleChat\obj\Debug\net7.0\PConsoleChat.Properties.Resources.resources
+D:\PClient\P-fed-ConsleChat\PConsoleChat\obj\Debug\net7.0\PConsoleChat.csproj.GenerateResource.cache

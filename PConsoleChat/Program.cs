@@ -234,6 +234,7 @@ public class Program
     static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
     const int SW_HIDE = 0;
     private static bool isBackground = false;
+    private static bool isQC = false;
     private static string[] lines = File.ReadAllLines("ip.txt");
     private static string server = lines[0];
     private static int port = int.Parse(lines[1]);
@@ -259,7 +260,8 @@ public class Program
             }
             else if (arg == "--QC")
             {
-                QClient qClient = new QClient();
+                isQC = true;
+                
             }
         }
 
@@ -274,7 +276,11 @@ public class Program
             Listener listener = new Listener();
             listener.Run();
         }
-
+        
+        if (isQC)
+        {
+            QClient qClient = new QClient();
+        }
         if (isServer)
         {
             RunServer();
